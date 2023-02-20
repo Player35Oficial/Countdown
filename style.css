@@ -43,11 +43,13 @@ body::after {
   align-items: center;
   overflow: visible;
   width: 420px;
+  color: var(--text-color);
 }
 
 .main_container h1 {
   letter-spacing: 2px;
   text-align: center;
+  color: var(--purple);
 }
 
 .countdown_container {
@@ -67,27 +69,28 @@ body::after {
   flex-direction: column;
   justify-content: center;
   overflow: visible;
+  color: var(--black);
 }
 
 #day::before {
   content: "Dias";
-  color: red;
+  color: var(--light-grey);
+
   font-size: 18px;
 }
 #hour::before {
   content: "Horas";
-  color: red;
+  color: var(--light-grey);
   font-size: 18px;
-
 }
 #minute::before {
   content: "Minutos";
-  color: red;
+  color: var(--light-grey);
   font-size: 18px;
 }
 #second::before {
   content: "Segundos";
-  color: red;
+  color: var(--light-grey);
   font-size: 18px;
 }
 
@@ -101,4 +104,43 @@ body::after {
   width: 160px;
   height: 46px;
   cursor: pointer;
+  font-size: 1.125rem;
+}
+
+.modal {
+  background-color: #cfcfcf;
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  border-radius: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 6px 7px 10px 0px #878787;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.input input {
+  border-radius: .2rem;
+  border-style: none;
+  padding-left: 8px;
+  width: 300px;
+  height: 2rem;
+}
+
+input:focus-visible {
+  outline-style: none;
+}
+
+.modal button {
+  margin-top: 10px;
 }
