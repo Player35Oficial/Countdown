@@ -28,3 +28,18 @@ function formatTime(time) {
 }
 
 setInterval(countdown, 1000);
+
+const modal = document.getElementById('modal')
+const subscribeBtn = document.getElementById('subscribe')
+const submitBtn = document.getElementById('submit')
+
+subscribeBtn.addEventListener('click', () => {
+  modal.style.display = "flex"
+})
+
+submitBtn.addEventListener('click', () => {
+  modal.innerHTML = `<span>Enviado com Sucesso!</span>`
+  setTimeout(() => {
+    modal.style.display = "none"
+  }, 2500)
+})
