@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+:root {
+  --black: #4D4C59;
+  --purple: #6C63FF;
+	--light-grey: #C8C8C8;
+  --text-color: #9C9AB6;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 4rem;
+}
+
+body::before {
+  content: url("./images/top-image.svg");
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+body::after {
+  content: url("./images/bottom-image.svg");
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  overflow: visible;
+  width: 420px;
+}
+
+.main_container h1 {
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.countdown_container {
+  /* background-color: #C8C8C8; */
+  display: flex;
+  gap: 18px;
+  font-size: 64px;
+  overflow: visible;
+  width: 100%;
+}
+
+#day, #hour, #minute, #second {
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: visible;
+}
+
+#day::before {
+  content: "Dias";
+  color: red;
+  font-size: 18px;
+}
+#hour::before {
+  content: "Horas";
+  color: red;
+  font-size: 18px;
+
+}
+#minute::before {
+  content: "Minutos";
+  color: red;
+  font-size: 18px;
+}
+#second::before {
+  content: "Segundos";
+  color: red;
+  font-size: 18px;
+}
+
+
+
+#subscribe {
+  background-color: #6C63FF;
+  color: #FFF;
+  border-style: none;
+  border-radius: 10px;
+  width: 160px;
+  height: 46px;
+  cursor: pointer;
+}
